@@ -31,6 +31,7 @@ const CTAButton = styled(Link)`
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  text-align: center;
   &:hover {
     background-color: #444;
   }
@@ -44,6 +45,14 @@ const ScheduleContainer = styled.div`
 
 const CalendlyWrapper = styled.div`
   min-height: 700px;
+`;
+
+const Footer = styled.footer`
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 `;
 
 function Home() {
@@ -68,8 +77,6 @@ function Home() {
         </Hero>
       </HomeContainer>
 
-      
-
       <ScheduleContainer>
         <h1>Schedule a Meeting</h1>
         <CalendlyWrapper>
@@ -80,6 +87,10 @@ function Home() {
           />
         </CalendlyWrapper>
       </ScheduleContainer>
+
+      <Footer>
+        <p>© {new Date().getFullYear()} 1'st Marketing. All rights reserved.</p>
+      </Footer>
     </div>
   );
 }
