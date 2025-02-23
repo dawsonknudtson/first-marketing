@@ -32,6 +32,6 @@ How It Works
 4️⃣ Scale & Profit – Watch your revenue grow as we optimize your sales process.
 
 
-📧 Contact Us: dawson@1'st-marketing.com
+📧 Contact Us: dawson@1st-marketing.com
 
-🌐 Website: 1'st-marketing.com
+🌐 Website: 1st-marketing.com
