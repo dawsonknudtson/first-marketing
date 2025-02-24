@@ -108,7 +108,7 @@ function Home() {
         <CalendlyWrapper>
           <div 
             className="calendly-inline-widget"
-            data-url="https://calendly.com/dawsonknudt/30min"
+            data-url="https://calendly.com/dawsonknudt/strategy-meeting"
             style={{ minWidth: '320px', height: '700px' }}
           />
         </CalendlyWrapper>
