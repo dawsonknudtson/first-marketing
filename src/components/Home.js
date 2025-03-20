@@ -91,19 +91,18 @@ function Home() {
     <div>
       <HomeContainer>
         <Hero>
-          <Title>Coaching & Info Businesses Above $7.5K Per Month</Title>
+          <Title>Helping Coaches, Info Businesses, and E-Commerce Brands Scale Beyond $5K/Month With Proven Copy & Sales Funnels</Title>
           <Subtitle>
-            We Help Scale and Retain Clients Through High-Converting{' '}
-            <BlueText>Copywriting</BlueText> & <BlueText>Sales Funnels</BlueText>
+          We Help You Predictably <BlueText>Scale</BlueText> and <BlueText>Retain</BlueText> Clients Using <BlueText>Data-Backed</BlueText> Copywriting & Sales Funnels
           </Subtitle>
         </Hero>
       </HomeContainer>
 
       <ScheduleContainer id="schedule">
         <ScheduleTitle>
-          Ready to Take Your Business to the Next Level?
+        Unlock Your Business Blindspots By...
           <br />
-          <BlueText>Schedule</BlueText> Your <BlueText>Free</BlueText> Strategy Call Today
+          <BlueText>Booking</BlueText> Your <BlueText>Free</BlueText> - No-Obligation Strategy Call Today
         </ScheduleTitle>
         <CalendlyWrapper>
           <div 
