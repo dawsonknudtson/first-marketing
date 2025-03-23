@@ -102,7 +102,7 @@ function Home() {
         <ScheduleTitle>
         Unlock Your Business Blindspots By...
           <br />
-          <BlueText>Booking</BlueText> Your <BlueText>Free</BlueText> - No-Obligation Strategy Call Today
+          Booking Your <BlueText>Free</BlueText> - <BlueText>No-Obligation</BlueText> Strategy Call Today
         </ScheduleTitle>
         <CalendlyWrapper>
           <div 
