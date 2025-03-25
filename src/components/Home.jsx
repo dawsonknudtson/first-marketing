@@ -38,7 +38,7 @@ const Title = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
@@ -95,9 +95,8 @@ const SectionTitle = styled.h2`
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text);
+  opacity: 0.95;
 `;
 
 const ServicesGrid = styled.div`

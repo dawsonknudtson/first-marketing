@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -33,13 +33,12 @@ const Logo = styled(Link)`
   font-size: 1.8rem;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
   transition: all 0.3s ease;
   
   &:hover {
     transform: translateY(-1px);
+    opacity: 1;
   }
 `;
 
@@ -74,9 +73,9 @@ const ContactButton = styled(Link)`
 `;
 
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
       if (isScrolled !== scrolled) {
@@ -91,7 +90,7 @@ function Navbar() {
   return (
     <Nav className={scrolled ? 'scrolled' : ''}>
       <NavContainer>
-        <Logo to="/">First Marketing</Logo>
+        <Logo to="/">1'st Marketing</Logo>
         <NavLinks>
           <NavLink to="/services">Services</NavLink>
           <NavLink to="/about">About</NavLink>
