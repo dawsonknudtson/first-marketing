@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -33,12 +33,13 @@ const Logo = styled(Link)`
   font-size: 1.8rem;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
-  opacity: 0.9;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
   
   &:hover {
     transform: translateY(-1px);
-    opacity: 1;
   }
 `;
 
@@ -73,9 +74,9 @@ const ContactButton = styled(Link)`
 `;
 
 function Navbar() {
-  const [scrolled, setScrolled] = React.useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
       if (isScrolled !== scrolled) {
