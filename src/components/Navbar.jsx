@@ -320,10 +320,9 @@ function Navbar() {
               <NavLink as="span">About</NavLink>
               <DropdownContent>
                 <AboutContent>
-                  <AboutTitle>Transform Your Business with Data-Driven Marketing</AboutTitle>
+                  <AboutTitle>Transform Your Business with the Power of Words</AboutTitle>
                   <AboutDescription>
-                    We help ambitious businesses scale beyond <AccentText>$5K/month</AccentText> with proven copywriting and 
-                    custom-built sales funnels that convert. Your success is our mission.
+                    We help Ecommerce, Coaching and Info-Business Scale through Coypwriting and Sales Funnels. 
                   </AboutDescription>
                 </AboutContent>
               </DropdownContent>

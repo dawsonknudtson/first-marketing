@@ -63,6 +63,14 @@ const AccentText = styled.span`
   font-weight: 600;
 `;
 
+const CTAText = styled.p`
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  opacity: 0.9;
+`;
+
 const CTAButton = styled(Link)`
   display: inline-block;
   background: var(--gradient-primary);
@@ -163,11 +171,14 @@ function Home() {
     <HomeContainer>
       <Hero>
         <HeroContent>
-          <Title>Transform Your Business with Data-Driven Marketing</Title>
+          <Title>Strategize. Personalize. Optimize.
+          </Title>
           <Subtitle>
-            We help ambitious businesses scale beyond <AccentText>$5K/month</AccentText> with proven copywriting and 
-            custom-built sales funnels that convert. Your success is our mission.
+            We don't just write word's - we craft <AccentText>strategic</AccentText> messages that speak directly to your ideal customers' deepest desires. From magentic landing page copy to email sequences that feel like they're reading your customers' mind.
           </Subtitle>
+          <CTAText>
+            If this sounds like something you need, All you need to do is...
+          </CTAText>
           <CTAButton to="/contact">Schedule Your Free Strategy Call</CTAButton>
         </HeroContent>
       </Hero>
@@ -185,7 +196,7 @@ function Home() {
             <ServiceCard>
               <ServiceTitle>Sales Funnels</ServiceTitle>
               <ServiceDescription>
-                Custom-designed sales funnels that guide prospects through their buyer's journey and maximize conversions.
+                Custom or Optimized designed sales funnels that guide prospects through their buyer's journey and maximize conversions.
               </ServiceDescription>
             </ServiceCard>
             <ServiceCard>
