@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -47,17 +47,80 @@ const Logo = styled(Link)`
     transform: translateY(-1px);
     opacity: 1;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const NavLinks = styled.div`
   display: flex;
   gap: 2rem;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+    
+    &.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--background);
+      padding: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      gap: 1rem;
+    }
+  }
+`;
+
+const HamburgerButton = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1002;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  span {
+    display: block;
+    width: 2rem;
+    height: 2px;
+    background: var(--text);
+    transition: all 0.3s ease;
+
+    &:nth-child(1) {
+      transform: ${({ isOpen }) => isOpen ? 'rotate(45deg) translate(5px, 5px)' : 'rotate(0)'};
+    }
+
+    &:nth-child(2) {
+      opacity: ${({ isOpen }) => isOpen ? '0' : '1'};
+    }
+
+    &:nth-child(3) {
+      transform: ${({ isOpen }) => isOpen ? 'rotate(-45deg) translate(7px, -6px)' : 'rotate(0)'};
+    }
+  }
 `;
 
 const NavItem = styled.div`
   position: relative;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -67,6 +130,11 @@ const NavLink = styled(Link)`
   
   &:hover {
     color: var(--text);
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    padding: 0.5rem 0;
   }
 `;
 
@@ -92,6 +160,24 @@ const DropdownContent = styled.div`
     opacity: 1;
     transform: translateX(-50%) translateY(0);
     pointer-events: auto;
+  }
+
+  @media (max-width: 768px) {
+    position: static;
+    transform: none;
+    min-width: 100%;
+    margin-top: 0.5rem;
+    box-shadow: none;
+    border-radius: 4px;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+    
+    ${NavItem}:hover & {
+      display: block;
+      transform: none;
+    }
   }
 `;
 
@@ -166,12 +252,19 @@ const ContactButton = styled(Link)`
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 `;
 
 function Navbar() {
-  const [scrolled, setScrolled] = React.useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
       if (isScrolled !== scrolled) {
@@ -183,13 +276,22 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <PlayfairFont />
       <Nav className={scrolled ? 'scrolled' : ''}>
         <NavContainer>
           <Logo to="/">1'st Marketing</Logo>
-          <NavLinks>
+          <HamburgerButton onClick={toggleMenu} isOpen={isMenuOpen}>
+            <span />
+            <span />
+            <span />
+          </HamburgerButton>
+          <NavLinks className={isMenuOpen ? 'active' : ''}>
             <NavItem>
               <NavLink as="span">Services</NavLink>
               <DropdownContent>
