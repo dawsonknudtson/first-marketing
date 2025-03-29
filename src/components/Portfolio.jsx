@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet-async';
 
 const PortfolioContainer = styled.div`
   margin-top: 80px; // Account for fixed navbar
@@ -55,8 +56,26 @@ const Subtitle = styled.p`
 function Portfolio() {
   return (
     <PortfolioContainer>
-      <ComingSoonContent>
-        <Title>Case Studies Coming Soon</Title>
+      <Helmet>
+        <title>Our Portfolio - First Marketing Case Studies</title>
+        <meta name="description" content="Explore our marketing case studies and success stories. See how First Marketing has helped businesses improve their conversions and grow through strategic marketing." />
+        <meta name="keywords" content="marketing portfolio, case studies, success stories, marketing results" />
+        <link rel="canonical" href="https://1st-marketing.com/portfolio" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "First Marketing Portfolio",
+            "description": "Case studies and success stories from our marketing projects.",
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": []
+            }
+          })}
+        </script>
+      </Helmet>
+      <ComingSoonContent as="section" aria-labelledby="portfolio-title">
+        <Title id="portfolio-title">Case Studies Coming Soon</Title>
         <Subtitle>
           We're currently preparing some amazing case studies to showcase our work.
           Check back soon!

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const HomeContainer = styled.div`
   margin-top: 80px; // Account for fixed navbar
@@ -169,10 +170,46 @@ const EmailLink = styled.a`
 function Home() {
   return (
     <HomeContainer>
-      <Hero>
+      <Helmet>
+        <title>First Marketing - Strategic Copywriting & Marketing Services</title>
+        <meta name="description" content="We craft strategic messages that speak directly to your ideal customers. From landing pages to email sequences that drive conversions and grow your business." />
+        <meta name="keywords" content="copywriting, sales funnels, marketing strategy, conversion optimization" />
+        <link rel="canonical" href="https://1st-marketing.com/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "First Marketing - Strategic Copywriting & Marketing Services",
+            "description": "We craft strategic messages that speak directly to your ideal customers' deepest desires.",
+            "mainEntity": {
+              "@type": "Service",
+              "name": "Marketing Services",
+              "serviceType": "Marketing",
+              "provider": {
+                "@type": "Organization",
+                "name": "First Marketing"
+              },
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "name": "Copywriting"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Sales Funnels"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Strategy & Optimization"
+                }
+              ]
+            }
+          })}
+        </script>
+      </Helmet>
+      <Hero as="section" aria-labelledby="hero-title">
         <HeroContent>
-          <Title>Strategize. Personalize. Optimize.
-          </Title>
+          <Title id="hero-title">Strategize. Personalize. Optimize.</Title>
           <Subtitle>
             We don't just write word's - we craft <AccentText>strategic</AccentText> messages that speak directly to your ideal customers' deepest desires. From magentic landing page copy to email sequences that feel like they're reading your customers' mind.
           </Subtitle>
@@ -183,9 +220,9 @@ function Home() {
         </HeroContent>
       </Hero>
 
-      <ServicesSection>
+      <ServicesSection as="section" aria-labelledby="services-title">
         <ServicesSectionContent>
-          <SectionTitle>Our Services</SectionTitle>
+          <SectionTitle id="services-title">Our Services</SectionTitle>
           <ServicesGrid>
             <ServiceCard>
               <ServiceTitle>Copywriting</ServiceTitle>
@@ -209,7 +246,7 @@ function Home() {
         </ServicesSectionContent>
       </ServicesSection>
 
-      <Footer>
+      <Footer as="footer">
         <FooterContent>
           <FooterText>
             Copyright © {new Date().getFullYear()} First Marketing - All Rights Reserved.

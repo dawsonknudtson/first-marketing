@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet-async';
 
 const BookingContainer = styled.div`
   margin-top: 80px; // Account for fixed navbar
@@ -43,7 +44,30 @@ function BookCall() {
 
   return (
     <BookingContainer>
-      <CalendlyWrapper>
+      <Helmet>
+        <title>Schedule a Free Strategy Call - First Marketing</title>
+        <meta name="description" content="Book a free marketing strategy call with First Marketing. Let's discuss how we can help your business grow with strategic copywriting and marketing services." />
+        <meta name="keywords" content="marketing consultation, strategy call, book appointment, marketing services" />
+        <link rel="canonical" href="https://1st-marketing.com/contact" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Marketing Consultation",
+            "provider": {
+              "@type": "Organization",
+              "name": "First Marketing"
+            },
+            "description": "Free marketing strategy consultation to discuss your business needs.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0.00",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
+      </Helmet>
+      <CalendlyWrapper as="section" aria-label="Appointment Booking">
         <div 
           className="calendly-inline-widget"
           data-url="https://calendly.com/dawsonknudt/strategy-meeting"
