@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // Add Google Fonts import for Playfair Display
@@ -233,11 +233,6 @@ const AboutDescription = styled.p`
   color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
-`;
-
-const AccentText = styled.span`
-  color: var(--text);
-  font-weight: 600;
 `;
 
 const ContactButton = styled(Link)`
