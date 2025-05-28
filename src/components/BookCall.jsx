@@ -46,19 +46,19 @@ function BookCall() {
     <BookingContainer>
       <Helmet>
         <title>Schedule a Free Strategy Call - First Marketing</title>
-        <meta name="description" content="Book a free marketing strategy call with First Marketing. Let's discuss how we can help your business grow with strategic copywriting and marketing services." />
-        <meta name="keywords" content="marketing consultation, strategy call, book appointment, marketing services" />
+        <meta name="description" content="Book a free automation strategy call with First Marketing. Let's discuss how we can help your business scale with AI workflow automation and smart systems." />
+        <meta name="keywords" content="automation consultation, strategy call, book appointment, AI automation services" />
         <link rel="canonical" href="https://1st-marketing.com/contact" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "serviceType": "Marketing Consultation",
+            "serviceType": "Automation Consultation",
             "provider": {
               "@type": "Organization",
               "name": "First Marketing"
             },
-            "description": "Free marketing strategy consultation to discuss your business needs.",
+            "description": "Free automation strategy consultation to discuss your business automation needs.",
             "offers": {
               "@type": "Offer",
               "price": "0.00",

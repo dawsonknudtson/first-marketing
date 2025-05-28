@@ -39,9 +39,7 @@ const Title = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text);
   line-height: 1.2;
 
   @media (max-width: 768px) {
@@ -75,7 +73,7 @@ const CTAText = styled.p`
 const CTAButton = styled(Link)`
   display: inline-block;
   background: var(--gradient-primary);
-  color: var(--text);
+  color: #ffffff;
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 500;
@@ -85,7 +83,7 @@ const CTAButton = styled(Link)`
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(77, 166, 255, 0.3);
   }
 `;
 
@@ -104,7 +102,7 @@ const SectionTitle = styled.h2`
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--text);
+  color: #000000;
   opacity: 0.95;
 `;
 
@@ -120,21 +118,23 @@ const ServiceCard = styled.div`
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
+  border: 2px solid var(--primary);
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(77, 166, 255, 0.2);
+    border-color: var(--primary-dark);
   }
 `;
 
 const ServiceTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--text);
+  color: #000000;
 `;
 
 const ServiceDescription = styled.p`
-  color: var(--text-secondary);
+  color: #333333;
   line-height: 1.6;
 `;
 
@@ -157,13 +157,13 @@ const FooterText = styled.p`
 `;
 
 const EmailLink = styled.a`
-  color: var(--text);
+  color: var(--primary);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
   
   &:hover {
-    color: var(--accent);
+    color: var(--primary-dark);
   }
 `;
 
@@ -171,20 +171,20 @@ function Home() {
   return (
     <HomeContainer>
       <Helmet>
-        <title>First Marketing - Strategic Copywriting & Marketing Services</title>
-        <meta name="description" content="We craft strategic messages that speak directly to your ideal customers. From landing pages to email sequences that drive conversions and grow your business." />
-        <meta name="keywords" content="copywriting, sales funnels, marketing strategy, conversion optimization" />
+        <title>First Marketing - AI Workflow Automation & Smart Systems</title>
+        <meta name="description" content="We don't just automate processes — we build smart systems that save you time, boost efficiency, and scale with your business. From AI-driven receptionist flows to full operational workflows." />
+        <meta name="keywords" content="AI automation, workflow automation, AI receptionist, systems optimization, business automation" />
         <link rel="canonical" href="https://1st-marketing.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "First Marketing - Strategic Copywriting & Marketing Services",
-            "description": "We craft strategic messages that speak directly to your ideal customers' deepest desires.",
+            "name": "First Marketing - AI Workflow Automation & Smart Systems",
+            "description": "We don't just automate processes — we build smart systems that save you time, boost efficiency, and scale with your business.",
             "mainEntity": {
               "@type": "Service",
-              "name": "Marketing Services",
-              "serviceType": "Marketing",
+              "name": "Automation Services",
+              "serviceType": "Business Automation",
               "provider": {
                 "@type": "Organization",
                 "name": "First Marketing"
@@ -192,15 +192,15 @@ function Home() {
               "offers": [
                 {
                   "@type": "Offer",
-                  "name": "Copywriting"
+                  "name": "AI Workflow Automation"
                 },
                 {
                   "@type": "Offer",
-                  "name": "Sales Funnels"
+                  "name": "AI Receptionist"
                 },
                 {
                   "@type": "Offer",
-                  "name": "Strategy & Optimization"
+                  "name": "Systems Optimization"
                 }
               ]
             }
@@ -209,14 +209,14 @@ function Home() {
       </Helmet>
       <Hero as="section" aria-labelledby="hero-title">
         <HeroContent>
-          <Title id="hero-title">Strategize. Personalize. Optimize.</Title>
+          <Title id="hero-title">Automate. Accelerate. Elevate.</Title>
           <Subtitle>
-            We don't just write word's - we craft <AccentText>strategic</AccentText> messages that speak directly to your ideal customers' deepest desires. From magentic landing page copy to email sequences that feel like they're reading your customers' mind.
+            We don't just automate processes — we build <AccentText>smart systems</AccentText> that save you time, boost efficiency, and scale with your business. From AI-driven receptionist flows to full operational workflows, we deliver intelligent automation.
           </Subtitle>
           <CTAText>
-            If this sounds like something you need, All you need to do is...
+            If you're ready to free up your time and supercharge your operations...
           </CTAText>
-          <CTAButton to="/contact">Schedule Your Free Strategy Call</CTAButton>
+          <CTAButton to="/contact">Book Your Free Strategy Call</CTAButton>
         </HeroContent>
       </Hero>
 
@@ -225,21 +225,21 @@ function Home() {
           <SectionTitle id="services-title">Our Services</SectionTitle>
           <ServicesGrid>
             <ServiceCard>
-              <ServiceTitle>Copywriting</ServiceTitle>
+              <ServiceTitle>AI Workflow Automation</ServiceTitle>
               <ServiceDescription>
-                Compelling, conversion-focused copy that speaks to your audience and drives results. From website content to email sequences.
+                We map and build automation flows using tools like Zapier and n8n to eliminate repetitive tasks and connect your favorite platforms.
               </ServiceDescription>
             </ServiceCard>
             <ServiceCard>
-              <ServiceTitle>Sales Funnels</ServiceTitle>
+              <ServiceTitle>AI Receptionist</ServiceTitle>
               <ServiceDescription>
-                Custom or Optimized designed sales funnels that guide prospects through their buyer's journey and maximize conversions.
+                Custom AI agents trained to handle calls, messages, and bookings — reducing overhead and keeping your business running 24/7.
               </ServiceDescription>
             </ServiceCard>
             <ServiceCard>
-              <ServiceTitle>Strategy & Optimization</ServiceTitle>
+              <ServiceTitle>Systems Optimization</ServiceTitle>
               <ServiceDescription>
-                Data-driven insights and continuous optimization to ensure your marketing efforts deliver maximum ROI.
+                Strategic analysis and AI integration to streamline operations, reduce costs, and ensure every system is working in sync.
               </ServiceDescription>
             </ServiceCard>
           </ServicesGrid>

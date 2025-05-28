@@ -15,11 +15,13 @@ const Nav = styled.nav`
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  border-bottom: 1px solid #e0e0e0;
   
   &.scrolled {
     background-color: var(--background-light);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     padding: 1rem 0;
+    border-bottom: 1px solid #d0d0d0;
   }
 `;
 
@@ -237,7 +239,7 @@ const AboutDescription = styled.p`
 
 const ContactButton = styled(Link)`
   background: var(--gradient-primary);
-  color: var(--text);
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   font-weight: 500;
@@ -245,7 +247,7 @@ const ContactButton = styled(Link)`
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(77, 166, 255, 0.3);
   }
 
   @media (max-width: 768px) {
@@ -288,36 +290,12 @@ function Navbar() {
           </HamburgerButton>
           <NavLinks className={isMenuOpen ? 'active' : ''}>
             <NavItem>
-              <NavLink as="span">Services</NavLink>
-              <DropdownContent>
-                <DropdownTitle>Our Services</DropdownTitle>
-                <ServiceItem>
-                  <ServiceTitle>Copywriting</ServiceTitle>
-                  <ServiceDescription>
-                    Compelling, conversion-focused copy that speaks to your audience and drives results. From website content to email sequences.
-                  </ServiceDescription>
-                </ServiceItem>
-                <ServiceItem>
-                  <ServiceTitle>Sales Funnels</ServiceTitle>
-                  <ServiceDescription>
-                    Custom Or Optimized sales funnels that guide prospects through their buyer's journey and maximize conversions.
-                  </ServiceDescription>
-                </ServiceItem>
-                <ServiceItem>
-                  <ServiceTitle>Strategy & Optimization</ServiceTitle>
-                  <ServiceDescription>
-                    Insights and continuous optimization to ensure your marketing efforts deliver maximum ROI for your dollar.
-                  </ServiceDescription>
-                </ServiceItem>
-              </DropdownContent>
-            </NavItem>
-            <NavItem>
               <NavLink as="span">About</NavLink>
               <DropdownContent>
                 <AboutContent>
-                  <AboutTitle>Transform Your Business with the Power of Words</AboutTitle>
+                  <AboutTitle>Transform Your Business with Smart Automation</AboutTitle>
                   <AboutDescription>
-                    We help Ecommerce, Coaching and Info-Business Scale through Coypwriting and Sales Funnels. 
+                    We help businesses scale through AI workflow automation, smart receptionist systems, and intelligent process optimization.
                   </AboutDescription>
                 </AboutContent>
               </DropdownContent>

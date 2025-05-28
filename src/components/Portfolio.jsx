@@ -57,16 +57,16 @@ function Portfolio() {
   return (
     <PortfolioContainer>
       <Helmet>
-        <title>Our Portfolio - First Marketing Case Studies</title>
-        <meta name="description" content="Explore our marketing case studies and success stories. See how First Marketing has helped businesses improve their conversions and grow through strategic marketing." />
-        <meta name="keywords" content="marketing portfolio, case studies, success stories, marketing results" />
+        <title>Our Portfolio - First Marketing Automation Case Studies</title>
+        <meta name="description" content="Explore our automation case studies and success stories. See how First Marketing has helped businesses streamline operations and scale through intelligent automation systems." />
+        <meta name="keywords" content="automation portfolio, case studies, success stories, AI automation results" />
         <link rel="canonical" href="https://1st-marketing.com/portfolio" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "First Marketing Portfolio",
-            "description": "Case studies and success stories from our marketing projects.",
+            "description": "Case studies and success stories from our automation projects.",
             "mainEntity": {
               "@type": "ItemList",
               "itemListElement": []

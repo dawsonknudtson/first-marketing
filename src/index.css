@@ -1,12 +1,12 @@
 :root {
-  --primary: #44484f;
-  --primary-light: #5a5f68;
-  --primary-dark: #2e3238;
-  --accent: #6e7684;
-  --text: #ffffff;
-  --text-secondary: #b3b9c5;
-  --background: #1a1d21;
-  --background-light: #2a2d33;
+  --primary: #4da6ff;
+  --primary-light: #66b3ff;
+  --primary-dark: #3399ff;
+  --accent: #4da6ff;
+  --text: #333333;
+  --text-secondary: #666666;
+  --background: #ffffff;
+  --background-light: #ffffff;
   --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 }
 
@@ -27,7 +27,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background);
+  background-color: #ffffff;
   color: var(--text);
   line-height: 1.6;
 }
@@ -56,7 +56,7 @@ a:hover {
 
 button, .button {
   background: var(--gradient-primary);
-  color: var(--text);
+  color: #ffffff;
   border: none;
   padding: 12px 24px;
   border-radius: 6px;
@@ -67,7 +67,7 @@ button, .button {
 
 button:hover, .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(77, 166, 255, 0.3);
 }
 
 .container {

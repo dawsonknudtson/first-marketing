@@ -18,7 +18,7 @@ const structuredData = {
     "email": "dawson@1st-marketing.com",
     "contactType": "customer service"
   },
-  "description": "Strategic copywriting and marketing services that convert. We craft personalized messages that speak directly to your ideal customers."
+  "description": "We don't just automate processes — we build smart systems that save you time, boost efficiency, and scale with your business. From AI-driven receptionist flows to full operational workflows, we deliver intelligent automation."
 };
 
 function App() {
