@@ -8,20 +8,18 @@ const PlayfairFont = styled.div`
 `;
 
 const Nav = styled.nav`
-  background-color: var(--background);
+  background-color: transparent;
   padding: 1.5rem 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  border-bottom: 1px solid #e0e0e0;
   
   &.scrolled {
-    background-color: var(--background-light);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 1rem 0;
-    border-bottom: 1px solid #d0d0d0;
   }
 `;
 
@@ -30,28 +28,62 @@ const NavContainer = styled.div`
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+`;
+
+const NavContent = styled.div`
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  
+  @media (max-width: 768px) {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    max-width: 600px;
+  }
 `;
 
 const Logo = styled(Link)`
   color: var(--text);
   text-decoration: none;
-  font-size: 1.9rem;
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-  font-style: normal;
+  font-size: 1.8rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
   letter-spacing: 0.02em;
   opacity: 0.95;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   
   &:hover {
     transform: translateY(-1px);
     opacity: 1;
+    color: var(--primary);
   }
 
   @media (max-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    gap: 0.3rem;
+  }
+`;
+
+const LogoImage = styled.img`
+  height: 2rem;
+  width: auto;
+  transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    height: 1.5rem;
   }
 `;
 
@@ -66,43 +98,52 @@ const NavLinks = styled.div`
     &.active {
       display: flex;
       flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--background);
-      padding: 1rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      position: fixed;
+      top: 100px;
+      left: 2rem;
+      right: 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
+      padding: 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       gap: 1rem;
+      z-index: 1000;
     }
   }
 `;
 
 const HamburgerButton = styled.button`
   display: none;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.75rem;
   z-index: 1002;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 2rem;
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   span {
     display: block;
-    width: 2rem;
+    width: 1.5rem;
     height: 2px;
     background: var(--text);
     transition: all 0.3s ease;
 
     &:nth-child(1) {
-      transform: ${({ isOpen }) => isOpen ? 'rotate(45deg) translate(5px, 5px)' : 'rotate(0)'};
+      transform: ${({ isOpen }) => isOpen ? 'rotate(45deg) translate(4px, 4px)' : 'rotate(0)'};
     }
 
     &:nth-child(2) {
@@ -110,7 +151,7 @@ const HamburgerButton = styled.button`
     }
 
     &:nth-child(3) {
-      transform: ${({ isOpen }) => isOpen ? 'rotate(-45deg) translate(7px, -6px)' : 'rotate(0)'};
+      transform: ${({ isOpen }) => isOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'rotate(0)'};
     }
   }
 `;
@@ -147,11 +188,13 @@ const DropdownContent = styled.div`
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-  background: var(--background);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
   min-width: 400px;
   padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1001;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
@@ -169,8 +212,8 @@ const DropdownContent = styled.div`
     transform: none;
     min-width: 100%;
     margin-top: 0.5rem;
-    box-shadow: none;
-    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
@@ -241,7 +284,7 @@ const ContactButton = styled(Link)`
   background: var(--gradient-primary);
   color: #ffffff;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 50px;
   font-weight: 500;
   transition: all 0.3s ease;
   
@@ -251,9 +294,8 @@ const ContactButton = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    text-align: center;
-    margin-top: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -282,27 +324,32 @@ function Navbar() {
       <PlayfairFont />
       <Nav className={scrolled ? 'scrolled' : ''}>
         <NavContainer>
-          <Logo to="/">1'st Marketing</Logo>
           <HamburgerButton onClick={toggleMenu} isOpen={isMenuOpen}>
             <span />
             <span />
             <span />
           </HamburgerButton>
-          <NavLinks className={isMenuOpen ? 'active' : ''}>
-            <NavItem>
-              <NavLink as="span">About</NavLink>
-              <DropdownContent>
-                <AboutContent>
-                  <AboutTitle>Transform Your Business with Smart Automation</AboutTitle>
-                  <AboutDescription>
-                    We help businesses scale through AI workflow automation, smart receptionist systems, and intelligent process optimization.
-                  </AboutDescription>
-                </AboutContent>
-              </DropdownContent>
-            </NavItem>
-            <NavLink to="/portfolio">Portfolio</NavLink>
-            <ContactButton to="/contact">Get Started</ContactButton>
-          </NavLinks>
+          <NavContent>
+            <Logo to="/">
+              <LogoImage src="/1'st.png" alt="1'st Marketing Logo" />
+              1'st
+            </Logo>
+            <NavLinks className={isMenuOpen ? 'active' : ''}>
+              <NavItem>
+                <NavLink as="span">About</NavLink>
+                <DropdownContent>
+                  <AboutContent>
+                    <AboutTitle>Transform Your Business with Smart Automation</AboutTitle>
+                    <AboutDescription>
+                      We help businesses scale through AI workflow automation, smart receptionist systems, and intelligent process optimization.
+                    </AboutDescription>
+                  </AboutContent>
+                </DropdownContent>
+              </NavItem>
+              <NavLink to="/portfolio">Portfolio</NavLink>
+              <ContactButton to="/contact">Get Started</ContactButton>
+            </NavLinks>
+          </NavContent>
         </NavContainer>
       </Nav>
     </>

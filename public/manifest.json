@@ -1,6 +1,6 @@
 {
   "short_name": "First Marketing",
-  "name": "First Marketing - Strategic Copywriting & Marketing Services",
+  "name": "First Marketing - AI Workflow Automation & Smart Systems",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#4da6ff",
   "background_color": "#ffffff"
 }
