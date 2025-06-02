@@ -16,6 +16,14 @@
       "dest": "/static/$1"
     },
     {
+      "src": "/kernoco.jpeg",
+      "dest": "/kernoco.jpeg"
+    },
+    {
+      "src": "/1'st.png",
+      "dest": "/1'st.png"
+    },
+    {
       "src": "/favicon.ico",
       "dest": "/favicon.ico"
     },
@@ -30,6 +38,10 @@
     {
       "src": "/sitemap.xml",
       "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|css|js))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",

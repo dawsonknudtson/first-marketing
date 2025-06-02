@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // Add Google Fonts import for Playfair Display
@@ -224,42 +224,6 @@ const DropdownContent = styled.div`
       transform: none;
     }
   }
-`;
-
-const DropdownTitle = styled.h3`
-  color: var(--text);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-`;
-
-const ServiceItem = styled.div`
-  margin-bottom: 1.5rem;
-  padding: 0.5rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &:hover {
-    background: var(--background-light);
-    transform: translateX(5px);
-  }
-`;
-
-const ServiceTitle = styled.h4`
-  color: var(--text);
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-`;
-
-const ServiceDescription = styled.p`
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.5;
 `;
 
 const AboutContent = styled.div`
