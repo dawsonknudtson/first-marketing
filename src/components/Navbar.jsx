@@ -331,8 +331,8 @@ function Navbar() {
           </HamburgerButton>
           <NavContent>
             <Logo to="/">
-              <LogoImage src="/1'st.png" alt="1'st Marketing Logo" />
-              1'st
+              <LogoImage src="/kernoco.jpeg" alt="Kernoco Logo" />
+              Kernoco
             </Logo>
             <NavLinks className={isMenuOpen ? 'active' : ''}>
               <NavItem>

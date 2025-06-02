@@ -1,6 +1,6 @@
 {
-  "short_name": "First Marketing",
-  "name": "First Marketing - AI Workflow Automation & Smart Systems",
+  "short_name": "Kernoco AI",
+  "name": "Kernoco AI - AI Workflow Automation & Smart Systems",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "1'st.png",
+      "src": "kernoco.jpeg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "1'st.png",
+      "src": "kernoco.jpeg",
       "type": "image/png",
       "sizes": "512x512"
     }

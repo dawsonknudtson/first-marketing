@@ -249,10 +249,10 @@ function Home() {
       <Footer as="footer">
         <FooterContent>
           <FooterText>
-            Copyright © {new Date().getFullYear()} First Marketing - All Rights Reserved.
+            Copyright © {new Date().getFullYear()} Kernoco AI - All Rights Reserved.
           </FooterText>
           <FooterText>
-            Contact us: <EmailLink href="mailto:dawson@1st-marketing.com">dawson@1st-marketing.com</EmailLink>
+            Contact us: <EmailLink href="mailto:dawson@1st-marketing.com">kernoco@protonmail.com</EmailLink>
           </FooterText>
         </FooterContent>
       </Footer>
